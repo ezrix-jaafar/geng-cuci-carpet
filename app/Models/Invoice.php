@@ -23,7 +23,6 @@ class Invoice extends Model
         return $this->belongsTo(Order::class);
     }
 
-
     public function client()
     {
         return $this->belongsTo(Client::class);
@@ -48,7 +47,4 @@ class Invoice extends Model
             }
         });
     }
-
-
-
 }

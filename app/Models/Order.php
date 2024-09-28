@@ -69,7 +69,7 @@ class Order extends Model
 
     public function generateInvoice()
     {
-        $totalPrice = $this->orderItems->sum('total_price');
+        $totalPrice = $this->orderItems->sum('price'); // Ensure this is correct
 
         $invoice = new Invoice([
             'order_id' => $this->id,
@@ -87,5 +87,4 @@ class Order extends Model
 
         return $invoice;
     }
-
 }

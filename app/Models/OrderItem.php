@@ -36,6 +36,7 @@ class OrderItem extends Model
             $orderItem->order->touch();
         });
     }
+
     public function getTotalPriceAttribute()
     {
         return $this->price * $this->quantity;
